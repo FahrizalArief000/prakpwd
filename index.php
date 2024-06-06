@@ -26,12 +26,14 @@ $id = "";
             border-radius: 10px;
             margin-top: 12px;
             border-color: var(--main-accent);
+            background-color: #f3f5f8;
             display: flex;
             flex-direction: row;
+            width: 90%;
         }
 
         .nav-brand {
-            width: 10%;
+            width: 20%;
             font-family: var(--brand-1-font-family);
             font-weight: var(--brand-1-font-weight);
             font-size: var(--brand-1-font-size);
@@ -87,24 +89,64 @@ $id = "";
             width: 28px;
         }
 
-        .chat,
         .chart {
             margin-right: 15px;
         }
 
-        .left,
-        .bottom-left,
-        .bottom-right,
-        .right {
+        .content {
+            margin-top: 90px;
+        }
+
+        .product {
+            width: 80%;
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            margin-top: 12px;
+            margin-bottom: 40px;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product img:hover {
+            width: 100%;
+            height: auto;
+            opacity: 50%;
+            border-radius: 10px;
+        }
+
+        .left {
+            width: 214%;
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .bottom-left,
+        .bottom-right {
+            display: flex;
+            justify-content: space-between;
             margin-top: 15px;
-            width: 80%;
-            justify-content: center;
+            width: 100%;
+
+        }
+
+        .bottom-left {
+            margin-right: 16px;
+        }
+
+        .right {
+            margin-left: 12px;
         }
 
         footer {
-            position: fixed;
             width: 100%;
             bottom: 0;
             font-size: small;
@@ -119,7 +161,7 @@ $id = "";
 
 <body>
     <div class="nav">
-        <div class="container">
+        <div class="container fixed-top">
             <div class="nav-brand">
                 <a href="index.php" class="brand">Baswara
             </div>
@@ -127,12 +169,10 @@ $id = "";
                 <div class="text-wrapper">
                     <a class="abha-series" <?= $id = "1" ?> href="series.php?op=series&id=<?php echo $id ?>">Abha Series</a>
                     <a class="dyva-series" <?= $id = "2" ?> href="series.php?op=series&id=<?php echo $id ?>">Dyva Series</a>
-                    <a class="loka-series" <?= $id = "3" ?> href="series.php?op=series&id=<?php echo $id ?>">Loka Series</a>
-                    <a class="kaya-series" <?= $id = "4" ?> href="series.php?op=series&id=<?php echo $id ?>">Kaya Series</a>
+                    <a class="Other" href="other.php">Other</a>
                 </div>
             </div>
             <div class="icon">
-                <div class="chat"><img class="chat" src="assets/icon/chat-1.svg" alt="chat"></div>
                 <a class="chart" href="chart.php"><img class="chart" src="assets/icon/chart.svg" alt="chart"></a>
                 <div class="akun"><img class="account" src="assets/icon/akun.svg" alt="akun"></div>
             </div>
@@ -145,15 +185,16 @@ $id = "";
                 <img src="assets/img/DYVA FW.png" alt="">
                 <div class="bottom">
                     <div class="bottom-left">
-                        <img src="assets/img/DYVA_MOIST.png" alt="" width="30%">
+                        <img src="assets/img/DYVA_MOIST.png" alt="">
                     </div>
                     <div class="bottom-right">
-                        <img src="assets/img/LOKA_50_2.png" alt="" width="30%">
+                        <img src="assets/img/LOKA_50_2.png" alt="">
                     </div>
                 </div>
             </div>
             <div class="right">
                 <img src="assets/img/ABHA FW.png" alt="">
+                <!-- <img src="assets/img/KAYA BODYWASH_2.png" alt=""> -->
             </div>
         </div>
     </div>
